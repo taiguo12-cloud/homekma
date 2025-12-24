@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko" class="antialiased">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>생성형 AI 입문 — 원페이지 학습</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script>tailwind = {config: {darkMode: 'class'}}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{--accent-from:#06b6d4;--accent-to:#3b82f6}
+    html,body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans',sans-serif}
+    /* 3D button */
+    .btn-3d{transform:translateY(-3px);box-shadow:0 12px 18px rgba(59,130,246,0.18), inset 0 -6px 12px rgba(0,0,0,0.08);transition:transform .14s ease,box-shadow .14s ease}
+    .btn-3d:active{transform:translateY(0);box-shadow:0 6px 10px rgba(59,130,246,0.12), inset 0 -3px 6px rgba(0,0,0,0.06)}
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100">
+  <!-- Sticky navbar with blur -->
+  <header class="sticky top-0 z-50">
+    <div class="backdrop-blur-md bg-white/60 dark:bg-slate-900/60 border-b border-white/10">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="#" class="font-semibold text-lg text-slate-900 dark:text-slate-100">생성형 AI 입문</a>
+        <nav class="hidden md:flex space-x-4">
+          <a href="#hero" class="text-sm font-medium">홈</a>
+          <a href="#grid" class="text-sm font-medium">핵심</a>
+          <a href="#resources" class="text-sm font-medium">자료</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button id="themeToggle" class="px-3 py-2 rounded-md bg-slate-100/60 dark:bg-slate-800/60 text-sm">다크/라이트</button>
+          <button class="md:hidden p-2 rounded-md bg-slate-100/60 dark:bg-slate-800/60">☰</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <section id="hero" class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">AI의 미래를 학습하세요</h1>
+        <p class="text-slate-600 dark:text-slate-300">생성형 AI의 기본 원리부터 프롬프트 설계, 윤리적 고려사항까지 한 페이지에서 빠르게 학습합니다.</p>
+        <div class="flex items-center gap-4">
+          <a href="#grid" class="btn-3d inline-flex items-center gap-3 px-6 py-3 rounded-full text-white bg-gradient-to-r from-cyan-400 to-blue-600 shadow-md">시작하기</a>
+          <a href="#resources" class="text-sm text-slate-600 dark:text-slate-300">추가 자료 보기</a>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <div class="w-full max-w-md bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-xl transform rotate-1">
+          <h3 class="font-semibold">빠른 개요</h3>
+          <ul class="mt-3 text-sm space-y-2 text-slate-600 dark:text-slate-300">
+            <li>LLM: 대규모 언어 모델</li>
+            <li>프롬프트 엔지니어링: 원하는 출력 설계</li>
+            <li>윤리: 편향, 출처, 투명성</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid: 3 핵심 섹션 -->
+    <section id="grid" class="mt-12">
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- 카드 래퍼: hover 시 그라데이션 보더 -->
+        <div class="group p-1 rounded-xl bg-transparent hover:bg-gradient-to-r hover:from-cyan-400/70 hover:to-blue-600/70 transition">
+          <article class="bg-white dark:bg-slate-800 rounded-lg p-6 h-full shadow-md">
+            <h4 class="text-lg font-semibold">LLM 원리</h4>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Transformer 기반 아키텍처, 토큰화, 확률적 샘플링(온도, 빔서치) 등 핵심 개념을 간단히 설명합니다.</p>
+            <div class="mt-4 text-xs text-slate-500 dark:text-slate-400">핵심: 사전학습 & 미세조정</div>
+          </article>
+        </div>
+
+        <div class="group p-1 rounded-xl bg-transparent hover:bg-gradient-to-r hover:from-pink-400/70 hover:to-rose-500/70 transition">
+          <article class="bg-white dark:bg-slate-800 rounded-lg p-6 h-full shadow-md">
+            <h4 class="text-lg font-semibold">프롬프트 엔지니어링</h4>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">명확한 지시와 예시 제공, 출력 포맷 고정화, 단계적 프롬프트로 안정적인 결과를 얻는 방법.</p>
+            <div class="mt-4 text-xs text-slate-500 dark:text-slate-400">팁: 구체적 + 예시 포함</div>
+          </article>
+        </div>
+
+        <div class="group p-1 rounded-xl bg-transparent hover:bg-gradient-to-r hover:from-emerald-400/70 hover:to-lime-500/70 transition">
+          <article class="bg-white dark:bg-slate-800 rounded-lg p-6 h-full shadow-md">
+            <h4 class="text-lg font-semibold">AI 윤리</h4>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">데이터 편향, 저작권, 프라이버시, 오용 방지와 같은 윤리적 문제와 책임 있는 사용 지침.</p>
+            <div class="mt-4 text-xs text-slate-500 dark:text-slate-400">원칙: 투명성 · 검증 · 책임</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- resources -->
+    <section id="resources" class="mt-12">
+      <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-md">
+        <h3 class="font-semibold">추가 자료</h3>
+        <ul class="mt-3 text-sm text-slate-600 dark:text-slate-300 space-y-2">
+          <li>- Transformer 논문, Diffusion 모델 소개</li>
+          <li>- 프롬프트 템플릿과 실습 예제</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-16 py-8 text-center text-sm text-slate-500 dark:text-slate-400">
+    © 2025 생성형 AI 입문 — 간단 학습 페이지
+  </footer>
+
+  <script>
+    // 테마 토글 (로컬스토리지 유지)
+    const btn = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    function setTheme(dark){
+      if(dark) root.classList.add('dark'); else root.classList.remove('dark');
+      localStorage.setItem('theme-dark', dark? '1':'0');
+    }
+    // 초기 로드
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const stored = localStorage.getItem('theme-dark');
+    setTheme(stored === null ? prefersDark : stored === '1');
+    btn.addEventListener('click', ()=> setTheme(!root.classList.contains('dark')));
+  </script>
+</body>
+</html>
