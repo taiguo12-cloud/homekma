@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025-2026 일본 여행 통합 가이드</title>
+    
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --glass-bg: rgba(255, 255, 255, 0.15);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-color: #ffffff;
+            --accent-color: #ff4757;
+            --font-title: 24pt;
+            --font-body: 17pt;
+            --font-analysis: 14pt;
+        }
+
+        body.light-theme {
+            --glass-bg: rgba(0, 0, 0, 0.05);
+            --glass-border: rgba(0, 0, 0, 0.1);
+            --text-color: #2f3542;
+            --accent-color: #e84118;
+        }
+
+        .reveal {
+            background: linear-gradient(135deg, #1e3799, #0c2461);
+            color: var(--text-color);
+        }
+
+        body.light-theme .reveal {
+            background: linear-gradient(135deg, #f1f2f6, #ced6e0);
+        }
+
+        /* Glassmorphism 슬라이드 스타일 */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            margin: 10px;
+            text-align: left;
+        }
+
+        .reveal h2 {
+            font-size: var(--font-title) !important;
+            color: var(--accent-color);
+            font-weight: bold;
+            text-transform: none;
+            margin-bottom: 20px;
+        }
+
+        .reveal p, .reveal li, .reveal td {
+            font-size: var(--font-body) !important;
+            line-height: 1.5;
+        }
+
+        /* 분석 텍스트 박스 (500자 이상) */
+        .analysis-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            font-size: var(--font-analysis);
+            height: 250px;
+            overflow-y: auto;
+            text-align: justify;
+            color: var(--text-color);
+        }
+
+        .light-theme .analysis-box {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* 테이블 스타일 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th { background: var(--accent-color); color: white; padding: 10px; }
+        td { padding: 10px; border-bottom: 1px solid var(--glass-border); }
+
+        /* 테마 스위치 버튼 */
+        .theme-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 999;
+            padding: 10px 20px;
+            border-radius: 30px;
+            border: none;
+            background: var(--accent-color);
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .chart-container {
+            width: 100%;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="theme-btn" onclick="toggleTheme()"><i class="fas fa-adjust"></i> 테마 전환</button>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- Slide 1: Title -->
+            <section>
+                <div class="glass-card" style="text-align: center;">
+                    <h2 style="font-size: 40pt !important;">2025-2026 일본 여행<br>통합 가이드 슬라이드</h2>
+                    <p>스마트한 계획부터 건강 관리, 성지순례까지</p>
+                    <div class="analysis-box">
+                        본 가이드는 2025년부터 2026년까지 일본을 방문하고자 하는 여행객들을 위해 제작된 종합 데이터 대시보드입니다. 일본의 디지털 전환 가속화에 따른 필수 앱 활용법, 세계적인 테마파크 USJ의 효율적 이용 전략, 그리고 도쿄, 삿포로, 후쿠오카 등 주요 거점 도시의 4박 5일 상세 일정을 담고 있습니다. 특히 단순한 관광지 정보를 넘어, 2026년 예상되는 물가 변동과 교통비 인상 이슈를 반영하여 실질적인 경비 수립이 가능하도록 설계되었습니다. 또한 겨울철 건강 관리와 중학생 자녀 동반 가족 여행의 심리적 교감 요소까지 고려하여, 여행의 물리적 편의와 정서적 만족을 모두 잡을 수 있는 전략적 통찰을 제공합니다. 이제 총 20개의 슬라이드를 통해 성공적인 일본 여행을 위한 마스터플랜을 확인해 보시기 바랍니다.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 2: 필수 앱 (1) -->
+            <section>
+                <div class="glass-card">
+                    <h2>1. 스마트한 일본 여행 필수 앱 (1)</h2>
+                    <table>
+                        <thead>
+                            <tr><th>카테고리</th><th>추천 앱</th><th>특징</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>교통/지도</td><td>NAVITIME</td><td>정교한 경로 안내</td></tr>
+                            <tr><td>결제/카드</td><td>Suica/PASMO</td><td>비접촉 결제 지원</td></tr>
+                            <tr><td>번역</td><td>Papago</td><td>한국어 최적화</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="analysis-box">
+                        2025년 일본 여행의 핵심은 디지털 연동성입니다. 과거에는 종이 지도와 안내책자가 필수였으나, 현재는 스마트폰 하나에 모든 기능을 집약시키는 전략이 필요합니다. NAVITIME Japan Travel은 일본 철도 특유의 복잡한 환승 시스템을 가장 완벽하게 한국어로 설명하며, 지연 정보나 급행 정차 여부를 실시간으로 반영합니다. 구글 맵 역시 훌륭하지만, 도보 안내와 로컬 맛집 리뷰 확인에 더 강점이 있습니다. 또한 모바일 Suica와 PASMO의 도입은 현금 환전의 수고를 80% 이상 덜어줍니다. 아이폰 사용자는 지갑 앱에서 즉시 발급 및 충전이 가능하며, 이는 지하철뿐만 아니라 편의점, 자동판매기, 심지어 코인 락커 결제까지 해결합니다. 파파고 번역 앱은 이미지 번역 기능이 매우 뛰어나, 복잡한 일본어 메뉴판이나 약 봉투의 설명을 즉석에서 한국어로 치환해 줍니다. 이러한 앱들을 여행 출발 1주일 전 미리 설치하고 익혀두는 것만으로도, 현지에서 겪을 수 있는 당혹스러운 상황의 절반 이상을 예방할 수 있습니다.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: 필수 앱 (2) -->
+            <section>
+                <div class="glass-card">
+                    <h2>2. 스마트한 일본 여행 필수 앱 (2)</h2>
+                    <ul class="fragment">
+                        <li><i class="fas fa-wifi"></i> <b>Japan Wi-Fi Auto-connect</b>: 무료 핫스팟 자동 연결</li>
+                        <li><i class="fas fa-ticket-alt"></i> <b>Klook/KKday</b>: 액티비티 및 티켓 할인 예약</li>
+                        <li><i class="fas fa-comments"></i> <b>LINE</b>: 현지 업체 소통 및 쿠폰 활용</li>
+                    </ul>
+                    <div class="analysis-box">
+                        데이터 관리와 사전 예약은 현대 여행의 효율을 결정짓는 두 축입니다. Japan Wi-Fi Auto-connect 앱은 일본 전역의 주요 역과 편의점에서 제공하는 무료 와이파이를 보안 우려 없이 자동으로 연결해주어, 로밍 데이터 소모를 획기적으로 줄여줍니다. 또한 Klook이나 KKday 같은 플랫폼은 2026년 시즌의 주요 관광지 티켓(시부야 스카이, 해리포터 스튜디오 등)을 현장보다 저렴하게 제공할 뿐만 아니라, 줄을 서지 않는 'Fast Track' 기능을 포함한 옵션을 제공하기도 합니다. 특히 일본 현지인들이 가장 많이 사용하는 라인(LINE) 메신저를 설치해 두면, 숙소나 식당과의 원활한 소통은 물론 공식 계정에서 발행하는 다양한 할인 쿠폰 혜택을 누릴 수 있습니다. 재난 정보를 실시간으로 알려주는 공식 여행 정보 앱은 안전을 위한 보험과 같습니다. 이러한 디지털 도구들의 유기적인 활용은 여행의 밀도를 높여주며, 예기치 못한 비상 상황에서도 침착하게 대응할 수 있는 능력을 부여합니다. 여행자는 도착 후 첫 경로 탐색부터 귀국 전 공항 리무진 예약까지 모든 과정을 스마트폰 안에서 완결할 수 있습니다.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: USJ 이용 꿀팁 -->
+            <section>
+                <div class="glass-card">
+                    <h2>3. 유니버설 스튜디오 재팬(USJ) 이용 꿀팁</h2>
+                    <div class="chart-container">
+                        <canvas id="usjChart"></canvas>
+                    </div>
+                    <div class="analysis-box">
+                        USJ 여행의 성패는 '시간을 돈으로 사는 결단력'에 달려 있습니다. 2025년과 2026년에도 슈퍼 닌텐도 월드의 인기는 식지 않을 것이며, 이를 즐기기 위해 입장권 외에 '익스프레스 패스'를 구매하는 것은 이제 선택이 아닌 필수로 여겨집니다. 익스프레스 패스는 인기 어트랙션의 대기 시간을 평균 100분에서 10분 내외로 단축시켜 주며, 하루에 즐길 수 있는 총 기구 수를 2배 이상 늘려줍니다. 특히 닌텐도 월드 입장을 위해서는 공식 앱을 통해 '입장 정리권'을 선착순으로 발급받아야 하는데, 파크 입장 직후 1분 1초를 다투는 전쟁이 벌어집니다. 따라서 방문 전날 미리 앱에 티켓을 등록해 두는 철저함이 필요합니다. 가족 여행객의 경우 어트랙션마다 다른 신장 제한을 미리 체크하여 헛걸음을 방지해야 하며, 유모차 대여 서비스 위치를 파악해 두면 체력 소모를 크게 줄일 수 있습니다. USJ의 티켓 가격은 방문 날짜에 따라 변동되는 '다이내믹 프라이싱'을 적용하므로, 예산 절약을 원한다면 주말보다는 평일 비수기를 공략하는 것이 경제적입니다.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: USJ TOP 4 어트랙션 -->
+            <section>
+                <div class="glass-card">
+                    <h2>4. USJ 한국인 선호 어트랙션 TOP 4</h2>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <div class="glass-card" style="padding: 10px; font-size: 15pt !important;">1. 마리오 카트 (AR 체험)</div>
+                        <div class="glass-card" style="padding: 10px; font-size: 15pt !important;">2. 해리 포터 (몰입형 3D)</div>
+                        <div class="glass-card" style="padding: 10px; font-size: 15pt !important;">3. 쥬라기 공원 (스릴 낙하)</div>
+                        <div class="glass-card" style="padding: 10px; font-size: 15pt !important;">4. 미니언 메이헴 (가족 친화)</div>
+                    </div>
+                    <div class="analysis-box">
+                        USJ의 어트랙션들은 단순한 놀이기구를 넘어 최첨단 기술의 집약체입니다. '마리오 카트: 쿠파의 도전장'은 증강현실(AR) 헤드셋을 착용하고 실제 아이템을 던지는 인터랙티브한 경험을 선사하여, 사용자가 직접 게임 속 주인공이 된 듯한 몰입감을 줍니다. '해리 포터와 금지된 여행'은 특수 촬영 기법과 움직이는 좌석을 통해 호그와트 성 위를 실제로 나는 듯한 압도적인 영상미를 자랑합니다. 한편, '쥬라기 공원 더 라이드'는 26m 높이에서 낙하하는 스릴을 제공하며 물을 많이 젖을 수 있어 우비 지참이 필수인 체험형 기구입니다. '미니언 메이헴'은 대형 돔 스크린을 통해 가족 모두가 웃으며 즐길 수 있는 시뮬레이션 라이드로, 미니언즈 특유의 귀여움과 역동적인 연출이 돋보입니다. 방문 전 본인의 성향이 '스릴형'인지 '몰입형'인지를 파악하여 우선순위를 정하는 것이 알찬 하루를 보내는 지름길입니다. 특히 마리오 카트와 해리 포터는 익스프레스 패스가 있더라도 시간대별 입장 제한이 있을 수 있으니, 패스에 적힌 시간을 꼼꼼히 확인하고 이동 동선을 최적화해야 합니다.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: USJ 먹거리 및 기념품 -->
+            <section>
+                <div class="glass-card">
+                    <h2>5. USJ의 맛과 추억 - 먹거리 및 기념품</h2>
+                    <p><i class="fas fa-beer"></i> 해리포터 버터맥주 | <i class="fas fa-hamburger"></i> 마리오 버거 세트</p>
+                    <div class="analysis-box">
+                        테마파크에서의 미식과 쇼핑은 전체 경험의 가치를 완성하는 마침표와 같습니다. 해리 포터 존의 버터맥주는 무알콜 음료로, 부드러운 거품과 달콤한 카라멜 풍미가 특징이며 성인과 아이 모두가 즐길 수 있는 USJ의 상징적인 메뉴입니다. 닌텐도 월드 내 '키노피오 카페'는 게임 속 세계관을 그대로 구현한 마리오 버거와 버섯 피자 등을 판매하며, 식사 자체를 하나의 놀이로 만들어 줍니다. 기념품 영역에서는 '파워업 밴드'가 필수 아이템으로 꼽힙니다. 밴드를 착용하고 파크 곳곳의 블록을 두드려 코인을 모으는 인터랙티브 활동은 닌텐도 월드의 재미를 완성하며, 이는 여행 후에도 소중한 수집품이 됩니다. 또한 미니언즈 캐릭터 만두나 팝콘 통은 한정판 디자인으로 제작되어 소장 욕구를 자극합니다. 쇼핑 팁을 드리자면, 파크 내 지정된 면세 카운터에서 당일 구매 영수증을 합산하여 세금 환급을 받을 수 있으므로, 5,500엔 이상의 기념품을 구매했다면 반드시 환급 절차를 밟아 비용을 절약하시기 바랍니다. 이러한 작은 혜택들이 모여 여행의 만족도를 더욱 높여줍니다.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: 도쿄 여행 경비 계획 (2026) -->
+            <section>
+                <div class="glass-card">
+                    <h2>6. 2026 도쿄 4박 5일 여행 경비 계획</h2>
+                    <div class="chart-container">
+                        <canvas id="budgetChart"></canvas>
+                    </div>
+                    <div class="analysis-box">
+                        2026년 도쿄 여행 예산 수립 시 가장 주목해야 할 점은 교통비와 숙박비의 점진적 상승입니다. 1인 기준 4박 5일 여행 시, 가성비형은 약 12만 엔, 여유형은 25만 엔 이상의 예산이 필요합니다. 항공권은 저가 항공사(LCC) 기준 약 4~6만 엔대로 유지될 것이나, 수하물 포함 여부를 반드시 체크해야 합니다. 숙소는 전체 예산의 약 40~50%를 차지하는 가장 큰 비중이며, 신주쿠나 긴자 같은 중심가는 1박당 최소 2.5만 엔 이상의 예산이 필요합니다. 식비는 한 끼에 편의점/가성비 체인점(1,000엔)과 맛집(3,000엔 이상)을 적절히 배분하면 하루 6~8,000엔으로 충분한 미식 경험이 가능합니다. 특히 2026년에는 JR 노선의 운임 인상 계획이 있으므로, 도쿄 지하철 패스(72시간권 등)를 전략적으로 활용하여 교통비를 방어하는 것이 중요합니다. 쇼핑 예산은 현금 환전 수수료가 없는 트래블로그나 트래블월렛 카드를 통해 관리하고, 면세 혜택을 극대화하기 위해 한 상점에서 5,000엔 이상씩 몰아서 구매하는 전략이 필요합니다. 이러한 구체적인 예산 수립은 여행 중 겪을 수 있는 금전적 스트레스를 줄이고, 계획된 범위 내에서 최대한의 즐거움을 누릴 수 있게 합니다.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: 도쿄 1-2일차 일정 -->
+            <section>
+                <div class="glass-card">
+                    <h2>7. 도쿄 핵심 1~2일차 추천 일정</h2>
+                    <p>아사쿠사 - 스카이트리 - 시부야 스카이 - 하라주쿠</p>
+                    <div class="analysis-box">
+                        도쿄 여행의 초반부는 전통과 현대가 공존하는 랜드마크 방문으로 시작합니다. 1일차에는 에도 시대의 풍경을 간직한 아사쿠사 센소지를 구경하고, 근처의 도쿄 스카이트리에서 도시 전체의 야경을 조망하는 코스가 매끄럽습니다. 2일차에는 현재 도쿄에서 가장 트렌디한 지역인 시부야로 향합니다. 시부야 스크램블 교차로에서의 인증샷은 필수이며, 특히 '시부야 스카이' 전망대는 일몰 시간대 방문을 위해 한 달 전 미리 예약해야 합니다. 이후 도보로 이동 가능한 하라주쿠 다케시타 거리에서 젊은 감성의 스트리트 푸드를 즐기고 메이지 신궁의 울창한 숲에서 도심 속 휴식을 취하는 일정입니다. 이 일정의 핵심은 동선 최소화입니다. 동쪽(아사쿠사)과 서쪽(시부야)의 거점을 각각 하루씩 나누어 배치함으로써 지하철 안에서 소모되는 시간을 줄이고, 각 장소의 매력을 충분히 느낄 수 있도록 설계되었습니다. 걷는 거리가 많으므로 반드시 편한 신발을 착용하는 것이 컨디션 조절의 핵심이며, 시부야 스카이 예약 실패 시를 대비해 롯폰기 힐즈 같은 대안 전망대를 미리 파악해 두는 지혜도 필요합니다.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: 도쿄 3-5일차 일정 -->
+            <section>
+                <div class="glass-card">
+                    <h2>8. 도쿄 테마파크 및 3~5일차 일정</h2>
+                    <p>디즈니 리조트 - 오다이바 - 긴자 쇼핑 - 나리타 이동</p>
+                    <div class="analysis-box">
+                        3일차는 온전히 하루를 투자하여 도쿄 디즈니랜드나 디즈니씨 중 한 곳을 방문하는 것을 추천합니다. 테마파크 방문이 부담스럽다면 오다이바 지역으로 향해 레인보우 브리지 야경과 '팀랩 플래닛' 전시를 관람하며 감성적인 하루를 보낼 수 있습니다. 4일차는 도쿄의 고급스러움을 느낄 수 있는 긴자에서 쇼핑을 즐기거나, 우에노 공원의 박물관을 둘러본 뒤 아키하바라의 서브컬처 문화를 체험하는 일정입니다. 마지막 5일차에는 숙소 인근 드럭스토어에서 최종 쇼핑을 마무리하고 나리타 공항으로 이동하는 스케줄입니다. 이 일정은 여행 후반부의 체력 저하를 고려하여 상대적으로 여유로운 쇼핑과 문화 관람 위주로 구성되었습니다. 특히 긴자에서는 주말 한정으로 열리는 '보행자 천국' 거리를 걸어보는 특별한 경험이 가능합니다. 짐이 많아지는 마지막 날에는 코인 락커나 호텔의 짐 보관 서비스를 적극 활용하여 빈손으로 자유롭게 이동하는 것이 중요합니다. 귀국편 항공기 시간에 맞춰 나리타 익스프레스나 스카이라이너 좌석을 미리 예약해 두는 것이 완벽한 마무리를 위한 마지막 단계입니다.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: 교통 및 공항 전략 -->
+            <section>
+                <div class="glass-card">
+                    <h2>9. 도쿄 교통패스 및 공항 이동 전략</h2>
+                    <table>
