@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025-2026 일본 여행 통합 가이드 대시보드</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+        
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --accent-color: #ef4444;
+        }
+
+        .dark {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f1f5f9;
+            --accent-color: #fb7185;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1000;
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            background: var(--accent-color);
+            color: white;
+            font-weight: bold;
+        }
+
+        .analysis-text {
+            line-height: 1.8;
+            font-size: 0.95rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            text-align: justify;
+        }
+
+        .interactive-row:hover {
+            background-color: rgba(239, 68, 68, 0.1);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon mr-2"></i> 테마 전환
+    </button>
+
+    <header class="text-center mb-12">
+        <h1 class="text-4xl font-bold mb-4">🇯🇵 2025-2026 일본 여행 통합 가이드</h1>
+        <p class="text-lg opacity-80">스마트한 준비부터 성지순례까지, 완벽한 여행을 위한 데이터 대시보드</p>
+    </header>
+
+    <div class="max-w-6xl mx-auto">
+
+        <!-- 1. 필수 앱 인터랙티브 표 -->
+        <section class="card">
+            <h2 class="text-2xl font-bold mb-6"><i class="fas fa-mobile-alt mr-2"></i> 1. 여행 필수 애플리케이션 가이드</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="border-b-2 border-red-400">
+                            <th class="p-3">카테고리</th>
+                            <th class="p-3">추천 앱</th>
+                            <th class="p-3">핵심 기능</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="interactive-row border-b">
+                            <td class="p-3 font-bold">교통/지도</td>
+                            <td class="p-3">NAVITIME, Google Maps</td>
+                            <td class="p-3">지하철/버스 정밀 경로 및 오프라인 지도</td>
+                        </tr>
+                        <tr class="interactive-row border-b">
+                            <td class="p-3 font-bold">결제/카드</td>
+                            <td class="p-3">Suica, PASMO, PayPay</td>
+                            <td class="p-3">비접촉 결제, 잔액 즉시 조회 및 QR 결제</td>
+                        </tr>
+                        <tr class="interactive-row border-b">
+                            <td class="p-3 font-bold">번역/언어</td>
+                            <td class="p-3">Google Translate, Papago</td>
+                            <td class="p-3">실시간 카메라 번역 및 음성 대화 지원</td>
+                        </tr>
+                        <tr class="interactive-row">
+                            <td class="p-3 font-bold">예약/미식</td>
+                            <td class="p-3">Tabelog, Klook, KKday</td>
+                            <td class="p-3">현지인 맛집 평점 및 액티비티 사전 예약</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="analysis-text">
+                2025년과 2026년의 일본 여행은 '디지털 연동성'이 성패를 좌우합니다. 과거에는 종이 지도와 안내책자가 필수였으나, 이제는 스마트폰 하나에 모든 기능을 집약시키는 것이 전략입니다. NAVITIME Japan Travel은 일본의 복잡한 철도 시스템을 한국어로 완벽하게 안내하며, Google Maps와 상호 보완적으로 사용될 때 길 찾기의 오류를 0%에 가깝게 줄여줍니다. 특히 모바일 Suica와 PASMO의 도입은 혁명적입니다. 아이폰 유저는 지갑 앱에서 즉시 발급이 가능하며, 이는 대중교통뿐만 아니라 편의점, 자동판매기, 심지어 일부 식당에서의 결제까지 해결해 줍니다. 또한 번역 앱인 파파고의 성능 향상으로 사진 촬영만으로 식당 메뉴판을 완벽히 이해할 수 있게 되었습니다. 이러한 앱들은 단순히 편리함을 넘어 여행 중 발생할 수 있는 의사소통 오류와 경로 이탈에 따른 시간 낭비를 획기적으로 방지합니다. 마지막으로 Tabelog와 같은 현지 플랫폼을 활용하면 관광객용 식당이 아닌, 일본 현지인들이 신뢰하는 진짜 맛집을 발견하는 즐거움을 누릴 수 있습니다. 스마트폰에 이 앱들을 미리 세팅하고 사용법을 익히는 것만으로도 여러분의 여행 스트레스는 80% 이상 감소할 것입니다.
+            </div>
+        </section>
+
+        <!-- 2. USJ 어트랙션 스릴 지수 차트 -->
+        <section class="card">
+            <h2 class="text-2xl font-bold mb-6"><i class="fas fa-grin-stars mr-2"></i> 2. USJ 인기 어트랙션 지수 분석</h2>
+            <div class="h-64 md:h-96">
+                <canvas id="usjChart"></canvas>
+            </div>
+            <div class="analysis-text">
+                유니버설 스튜디오 재팬(USJ)의 어트랙션들은 각기 다른 매력을 지니고 있으며, 이를 체계적으로 분석하여 동선을 짜는 것이 중요합니다. 시각화된 차트에서 볼 수 있듯이 '쥬라기 공원 더 라이드'는 낙하 폭이 커 신체적인 스릴 지수가 가장 높습니다. 반면 '해리 포터와 금지된 여행'은 신체적 낙하보다는 최첨단 4K3D 영상을 통한 시각적 몰입감과 마법 세계를 질주하는 듯한 '몰입 스릴'에서 만점을 받습니다. 2025년에도 여전히 가장 큰 인기를 끌 '슈퍼 닌텐도 월드'의 마리오 카트는 AR(증강현실) 기술을 활용하여 사용자가 직접 아이템을 던지는 '경쟁적 재미'가 핵심입니다. 미니언 메이헴은 가족 단위 방문객에게 최적화된 시뮬레이션으로 영상의 재미를 극대화합니다. 이러한 어트랙션의 성격을 미리 파악해야 하는 이유는 '익스프레스 패스'의 선택 때문입니다. 스릴을 즐기는 여행자라면 쥬라기 공원이나 할리우드 드림 더 라이드가 포함된 패스를, 몰입감과 스토리를 중시한다면 해리포터와 닌텐도 월드 확약권이 포함된 구성을 선택해야 합니다. 방문 전 이 지표를 참고하여 본인의 취향에 맞는 어트랙션 순위를 정하고, 앱을 통해 실시간 대기 시간을 체크하며 이동한다면 훨씬 효율적인 파크 이용이 가능할 것입니다.
+            </div>
+        </section>
+
+        <!-- 3. 도쿄 여행 경비 계산기 (인터랙티브) -->
+        <section class="card">
+            <h2 class="text-2xl font-bold mb-6"><i class="fas fa-calculator mr-2"></i> 3. 2026 도쿄 4박 5일 예상 경비 (1인 기준)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-4 border rounded-lg text-center bg-gray-50 dark:bg-gray-700">
+                    <h3 class="font-bold mb-2">가성비형</h3>
+                    <p class="text-xl text-red-500">약 105,000엔</p>
+                    <ul class="text-sm mt-2 opacity-70">LCC 항공 / 비즈니스 호텔 / 편의점&현지식</ul>
+                </div>
+                <div class="p-4 border rounded-lg text-center bg-gray-50 dark:bg-gray-700 border-red-400">
+                    <h3 class="font-bold mb-2">일반형</h3>
+                    <p class="text-xl text-red-500">약 175,000엔</p>
+                    <ul class="text-sm mt-2 opacity-70">FSC 항공 / 3-4성급 호텔 / 맛집 중심</ul>
+                </div>
+                <div class="p-4 border rounded-lg text-center bg-gray-50 dark:bg-gray-700">
+                    <h3 class="font-bold mb-2">여유형</h3>
+                    <p class="text-xl text-red-500">280,000엔 이상</p>
+                    <ul class="text-sm mt-2 opacity-70">비즈니스석 / 5성급 호텔 / 미슐랭&쇼핑</ul>
+                </div>
+            </div>
+            <div class="analysis-text">
+                도쿄 여행의 예산 수립에 있어 2026년 가장 주목해야 할 변수는 '교통비와 숙박비의 점진적 상승'입니다. 도쿄는 세계적인 관광 도시로, 숙박비가 전체 예산의 약 40~50%를 차지할 정도로 비중이 큽니다. 가성비형 여행을 계획한다면 신주쿠나 긴자 중심가보다는 지하철로 15~20분 거리에 있는 우에노, 아사쿠사, 혹은 니혼바시 인근의 비즈니스 호텔을 공략하는 것이 현명합니다. 식비의 경우 도쿄는 스펙트럼이 매우 넓습니다. 점심에는 직장인들을 위한 1,000엔 내외의 가성비 런치 세트를 이용하고, 저녁에는 이자카야나 전문 식당에서 3,000~5,000엔 정도를 투자하는 방식으로 완급 조절이 가능합니다. 특히 2026년에는 JR 동일본의 운임 인상이 예고되어 있어, '도쿄 지하철 패스(24/48/72시간권)'의 전략적 활용이 더욱 중요해질 것입니다. 항공권은 출발 3~4개월 전 예약이 필수이며, 최근 유가 변동성을 고려할 때 수하물 규정이 넉넉한 항공사를 선택하는 것이 사후 추가 비용을 막는 길입니다. 또한 쇼핑 예산은 면세(Tax-Free) 혜택을 고려하여 한 상점에서 5,000엔 이상 구매하는 계획을 세우면 약 10%의 비용을 즉시 절감할 수 있습니다. 자신의 여행 스타일을 위 세 가지 카테고리 중 어디에 맞출지 결정하고, 그에 따른 예비비를 10% 정도 추가로 확보한다면 경제적이면서도 만족도 높은 도쿄 여행이 될 것입니다.
+            </div>
+        </section>
+
+        <!-- 4. 도쿄 일정 탭 (인터랙티브) -->
+        <section class="card">
+            <h2 class="text-2xl font-bold mb-6"><i class="fas fa-calendar-alt mr-2"></i> 4. 도쿄 핵심 5일 코스 전략</h2>
+            <div class="flex flex-wrap gap-2 mb-6">
+                <button onclick="showDay(1)" class="px-4 py-2 bg-red-500 text-white rounded">1-2일차</button>
+                <button onclick="showDay(3)" class="px-4 py-2 bg-red-500 text-white rounded">3일차</button>
+                <button onclick="showDay(4)" class="px-4 py-2 bg-red-500 text-white rounded">4-5일차</button>
+            </div>
+            <div id="dayContent" class="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <h3 class="font-bold text-lg mb-2">1-2일차: 전통과 트렌드의 조화</h3>
+                <p>아사쿠사 센소지 - 도쿄 스카이트리 - 시부야 스카이 - 하라주쿠</p>
+            </div>
+            <div class="analysis-text">
+                도쿄의 5일 일정은 '지역별 집중'이 핵심입니다. 도쿄는 면적이 매우 넓고 교통 체증보다는 지하철 환승의 복잡함이 여행자를 지치게 만들기 때문에, 하루에 너무 많은 구역을 이동하는 것은 지양해야 합니다. 1~2일차에는 도쿄의 뿌리라고 할 수 있는 동쪽의 아사쿠사에서 시작하여 현대의 상징인 시부야로 넘어가는 동선이 이상적입니다. 특히 시부야 스카이는 일몰 1시간 전 입장이 가장 인기가 많으므로 한 달 전 예약이 필수입니다. 3일차는 온전히 하루를 테마파크(디즈니랜드 또는 디즈니씨)에 투자하거나, 오다이바의 팀랩 전시를 관람하며 감성적인 시간을 보낼 것을 추천합니다. 4~5일차는 개인의 취향에 따른 선택의 시간입니다. 애니메이션 팬이라면 아키하바라와 나카노 브로드웨이를, 명품과 고급스러운 카페를 선호한다면 긴자와 오모테산도를 방문하는 식입니다. 마지막 날에는 나리타 혹은 하네다 공항으로의 이동 시간을 고려하여 공항 접근성이 좋은 우에노나 품격 있는 마무리가 가능한 하마마츠초 부근에서 마지막 식사와 쇼핑을 즐기는 것이 좋습니다. 이 코스의 강점은 도쿄의 과거, 현재, 미래를 모두 경험할 수 있다는 점이며, 각 명소 사이의 이동 시간을 30분 이내로 설계하여 체력 소모를 최소화했다는 점입니다. 계획적인 이동은 단순한 관광을 넘어 도쿄라는 도시의 맥락을 이해하는 깊이 있는 여행을 가능하게 합니다.
+            </div>
+        </section>
+
+        <!-- 5. 교통/공항 정보 차트 -->
+        <section class="card">
+            <h2 class="text-2xl font-bold mb-6"><i class="fas fa-train mr-2"></i> 5. 공항 및 시내 교통 최적화 데이터</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="bg-red-100 dark:bg-red-900">
+                                <th class="p-2">수단</th>
+                                <th class="p-2">소요시간</th>
+                                <th class="p-2">가격</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b"><td class="p-2">나리타 스카이라이너</td><td class="p-2">약 40분</td><td class="p-2">2,570엔</td></tr>
+                            <tr class="border-b"><td class="p-2">나리타 N'EX</td><td class="p-2">약 60분</td><td class="p-2">약 3,000엔</td></tr>
+                            <tr class="border-b"><td class="p-2">하네다 모노레일</td><td class="p-2">약 15분</td><td class="p-2">500엔</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded">
+                    <h4 class="font-bold mb-2">교통 패스 추천</h4>
+                    <p class="text-sm">72시간 도쿄 지하철 패스: 1,500엔</p>
+                    <p class="text-sm">※ 하루 5회 이상 탑승 시 절대적 이득</p>
+                </div>
+            </div>
+            <div class="analysis-text">
+                일본 여행에서 교통편 선택은 단순히 가격의 문제가 아니라 '시간의 기회비용' 문제입니다. 나리타 공항을 이용할 경우, 숙소가 우에노나 닛포리 쪽이라면 스카이라이너가 압도적으로 빠르지만, 신주쿠나 도쿄역 부근이라면 N'EX(나리타 익스프레스)를 이용하는 것이 환승의 번거로움을 줄여줍니다. 특히 N'EX는 외국인 대상 왕복 할인권이 있어 경제적입니다. 반면 하네다 공항은 도심과의 접근성이 매우 뛰어나 택시를 타더라도 부담이 적고, 케이큐선이나 모노레일을 이용하면 15~20분 만에 도쿄 중심부에 진입할 수 있어 짧은 일정의 여행자에게 강력 추천됩니다. 시내 교통의 경우, 많은 여행자가 JR과 지하철을 혼동합니다. '도쿄 지하철 패스'는 도쿄메트로와 도에이 지하철 노선만 가능하므로, JR 야마노테선 위주로 이동할 계획이라면 패스보다는 스이카 충전이 유리합니다. 2025-2026년에는 모든 교통 카드 시스템이 모바일화되므로, 실물 카드를 사기 위해 줄을 서는 시간을 아끼십시오. 또한 구글 맵의 '경로 저장' 기능을 활용하면 실시간 열차 지연 정보까지 확인할 수 있어 더욱 정밀한 이동이 가능합니다. 결국 효율적인 교통 전략이란 자신의 숙소 위치와 하루 방문지의 밀집도를 고려하여 패스와 충전식 카드를 적절히 혼용하는 지혜에서 나옵니다.
+            </div>
+        </section>
+
+        <!-- 6. 건강/안전 가이드 (인터랙티브) -->
+        <section class="card">
+            <h2 class="text-2xl font-bold mb-6"><i class="fas fa-medkit mr-2"></i> 6. 겨울철 건강 및 독감 예방 타임라인</h2>
+            <div class="relative border-l-2 border-red-400 ml-4 pl-6 space-y-6">
+                <div class="relative">
+                    <span class="absolute -left-[31px] bg-red-500 w-4 h-4 rounded-full"></span>
+                    <h4 class="font-bold">입국 전</h4>
+                    <p class="text-sm">여행자 보험 가입 (질병 보장 필수), 개인 상비약 준비</p>
+                </div>
+                <div class="relative">
+                    <span class="absolute -left-[31px] bg-red-500 w-4 h-4 rounded-full"></span>
+                    <h4 class="font-bold">여행 중</h4>
+                    <p class="text-sm">철저한 손 씻기, 실내 가습 유지(젖은 수건), 마스크 착용</p>
+                </div>
+                <div class="relative">
+                    <span class="absolute -left-[31px] bg-red-500 w-4 h-4 rounded-full"></span>
+                    <h4 class="font-bold">이상 증상 시</h4>
+                    <p class="text-sm">호텔 프런트에 병원 문의 혹은 보험사 통역 서비스 이용</p>
+                </div>
+            </div>
+            <div class="analysis-text">
+                일본의 겨울은 한국에 비해 기온은 높지만 습도가 매우 낮아 호흡기 질환에 취약한 환경입니다. 특히 2025-2026 겨울 시즌에도 독감과 같은 감염병 유행이 예상되므로 철저한 대비가 필요합니다. 일본 호텔의 중앙 집중식 난방은 객실을 극도로 건조하게 만듭니다. 이는 비강 점막을 마르게 하여 바이러스 침투를 용이하게 하므로, 가습기가 없다면 욕조에 물을 받아두거나 젖은 수건을 여러 장 걸어두는 것이 필수적입니다. 또한 일본의 의료 체계는 매우 신뢰할 만하지만, 외국인에게는 예약이나 언어적 장벽이 있을 수 있습니다. 따라서 '입국 후 즉시 가입 가능한 일본 전용 여행자 보험'을 미리 알아두는 것이 좋습니다. 일본 현지에서는 타미플루 등 독감 치료제를 구매하려면 반드시 의사의 처방전이 필요합니다. 한국처럼 약국에서 종합 감기약을 살 수는 있지만 효과가 약할 수 있으므로, 고열이 발생하면 지체 없이 '내과(内科)' 혹은 '소아과(小児科)'를 방문해야 합니다. 이때 보험사와 연계된 실시간 통역 앱을 활용하면 증상을 정확히 전달할 수 있습니다. 건강한 여행은 단순히 병에 걸리지 않는 것을 넘어, 문제가 생겼을 때 빠르게 대응할 수 있는 준비가 되어 있을 때 완성됩니다. 개인위생 수칙을 준수하고 충분한 수분을 섭취하며, 무리한 일정보다는 적절한 휴식을 병행하는 것이 최고의 방역 전략입니다.
+            </div>
+        </section>
+
+        <!-- 7. 지역별 여행 만족도 비교 -->
+        <section class="card">
+            <h2 class="text-2xl font-bold mb-6"><i class="fas fa-map-marked-alt mr-2"></i> 7. 목적지별 테마 만족도 분석</h2>
+            <div class="h-64 md:h-96">
+                <canvas id="regionChart"></canvas>
+            </div>
+            <div class="analysis-text">
+                일본의 각 지역은 고유의 색깔이 뚜렷하여 여행 목적에 따른 선택이 중요합니다. 분석 차트를 보면 삿포로(홋카이도)는 '자연 경관'과 '미식' 부문에서 압도적인 만족도를 보입니다. 특히 겨울의 설경과 신선한 해산물, 징기스칸 요리는 가족 단위 여행객과 중학생 자녀를 둔 부모들에게 정서적 힐링을 선사합니다. 반면 후쿠오카는 '접근성'과 '쇼핑'에서 높은 점수를 받습니다. 공항과 시내가 단 10분 거리라는 점은 2박 3일의 짧은 일정으로도 충분한 만족감을 주며, 인근 유후인과 벳푸를 연계한 온천 투어는 부모님을 모시는 효도 여행으로 최적입니다. 도쿄는 '문화/트렌드'와 '활동성'의 성지입니다. 끊임없이 변하는 랜드마크와 전시, 세계적인 수준의 디저트 카페 투어는 젊은 층과 얼리어답터 여행자들에게 끊임없는 자극을 줍니다. 2026년에는 각 지역의 관광세 도입이나 인상 여부도 확인해야 할 변수입니다. 예컨대 삿포로의 조용한 교외 료칸은 휴식을, 도쿄의 시부야는 활기찬 에너지를 제공합니다. 자신의 현재 상태가 '충전'이 필요한지 '발산'이 필요한지를 먼저 고민하고 목적지를 정한다면 실패 없는 여행이 될 것입니다. 지역별 강점을 이해하는 것은 단순히 어디를 가느냐의 문제를 넘어, 누구와 어떤 추억을 쌓을 것인지에 대한 설계도를 그리는 과정입니다.
+            </div>
+        </section>
+
+        <!-- 8. 절약 12계명 체크리스트 -->
+        <section class="card">
+            <h2 class="text-2xl font-bold mb-6"><i class="fas fa-piggy-bank mr-2"></i> 8. 여행 예산 절약 핵심 체크리스트</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <label class="flex items-center space-x-3 p-2 border rounded hover:bg-red-50 cursor-pointer">
+                    <input type="checkbox" class="form-checkbox h-5 w-5 text-red-600">
+                    <span>역에서 도보 8분 이내 숙소 선정 (교통비/체력 절감)</span>
+                </label>
+                <label class="flex items-center space-x-3 p-2 border rounded hover:bg-red-50 cursor-pointer">
+                    <input type="checkbox" class="form-checkbox h-5 w-5 text-red-600">
+                    <span>편의점 아침식사 및 마트 마감 세일 활용</span>
+                </label>
+                <label class="flex items-center space-x-3 p-2 border rounded hover:bg-red-50 cursor-pointer">
+                    <input type="checkbox" class="form-checkbox h-5 w-5 text-red-600">
+                    <span>전망대는 가장 가고 싶은 딱 한 곳만 예약</span>
+                </label>
+                <label class="flex items-center space-x-3 p-2 border rounded hover:bg-red-50 cursor-pointer">
+                    <input type="checkbox" class="form-checkbox h-5 w-5 text-red-600">
+                    <span>트래블로그/트래블월렛 등 수수료 무료 카드 사용</span>
+                </label>
+            </div>
+            <div class="analysis-text">
+                일본 여행에서 절약은 단순히 돈을 아끼는 것이 아니라 '불필요한 지출을 가치 있는 경험으로 전환'하는 과정입니다. 가장 큰 절약 포인트는 역시 숙소 위치입니다. 역에서 먼 숙소는 가격은 저렴할지 모르나, 매일 반복되는 이동 시간과 체력 소모, 그리고 늦은 밤 택시 이용 가능성을 고려하면 오히려 손해일 수 있습니다. '역세권 비즈니스 호텔'을 선택하는 것이 최고의 보험입니다. 또한 식비 절약의 꽃은 일본의 고도로 발달한 편의점과 백화점 지하 식품관(데파치카)입니다. 특히 저녁 7~8시 이후 백화점 식품관의 마감 세일은 고퀄리티의 초밥과 도시락을 반값에 즐길 수 있는 절호의 기회입니다. 환전 전략도 중요합니다. 2025년 현재 일본은 급격히 현금 없는 사회로 이행 중입니다. 트래블로그나 트래블월렛 같은 카드를 활용하면 실시간 환율로 수수료 없이 충전하여 사용할 수 있어, 현금 환전 수수료와 동전 관리의 번거로움을 동시에 해결할 수 있습니다. 마지막으로 쇼핑 시 '돈키호테'나 대형 드럭스토어에서 제공하는 카카오톡 할인 쿠폰을 미리 챙기십시오. 면세 10%에 추가 5% 할인을 더하면 상당한 금액이 절약됩니다. 이러한 작은 습관들이 모여 확보된 예산은 여행 마지막 날의 고급 가이세키 요리나 특별한 기념품 구매를 위한 소중한 자산이 될 것입니다.
+            </div>
+        </section>
+
+        <!-- 9. 겨울 코디 및 준비물 가이드 -->
+        <section class="card">
+            <h2 class="text-2xl font-bold mb-6"><i class="fas fa-tshirt mr-2"></i> 9. 지역별/시즌별 코디 가이드</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-4 bg-blue-50 dark:bg-blue-900 rounded-lg">
+                    <h4 class="font-bold mb-2">북부 (홋카이도)</h4>
+                    <p class="text-sm">방수 부츠, 롱패딩, 털모자, 방한 장갑 필수</p>
+                </div>
+                <div class="p-4 bg-orange-50 dark:bg-orange-900 rounded-lg">
+                    <h4 class="font-bold mb-2">중남부 (도쿄/오사카/후쿠오카)</h4>
+                    <p class="text-sm">울 코트, 경량 패딩, 목도리, 히트텍 레이어드</p>
+                </div>
+            </div>
+            <div class="analysis-text">
+                일본 겨울 여행의 코디 핵심은 '레이어드(겹쳐 입기)'입니다. 일본은 실외 온도가 한국보다 높더라도 건물 내부, 지하철, 백화점의 난방이 매우 강력하여 온도 차가 극명합니다. 따라서 두꺼운 옷 하나보다는 얇은 옷을 여러 겹 입어 상황에 따라 쉽게 벗고 입을 수 있어야 합니다. 도쿄나 오사카 지역은 한낮에 10도 안팎까지 올라가는 경우가 많아, 두꺼운 롱패딩보다는 세련된 울 코트에 경량 패딩 조끼를 받쳐 입는 것이 활동성과 스타일을 모두 잡는 방법입니다. 하지만 삿포로를 포함한 북부 지역은 이야기가 다릅니다. 이곳은 단순히 추운 것이 아니라 '눈'이 많이 내리기 때문에, 신발은 반드시 방수 기능이 있고 미끄럼 방지가 되는 부츠여야 합니다. 일반 운동화는 눈에 젖어 동상의 위험이 있습니다. 또한 일본 여행의 필수 준비물 중 하나는 '돼지코(110V 변환 플러그)'입니다. 최근 멀티탭 기능을 포함한 제품이 많으니 하나쯤 구비하면 좋습니다. 보조 배터리 역시 필수입니다. 구글 맵과 번역기, 결제 앱을 계속 사용하다 보면 배터리 소모가 극심하기 때문입니다. 마지막으로 일본의 건조함을 이기기 위한 개인용 립밤과 핸드크림을 가방에 상시 휴대하십시오. 세심하게 준비된 옷차림과 소지품은 여행 중 겪을 수 있는 사소한 불편함을 제거하고, 여러분이 풍경과 미식에만 온전히 집중할 수 있도록 도와줄 것입니다.
+            </div>
+        </section>
+
+        <!-- 10. 애니메이션 성지순례 인터랙티브 맵 대체 리스트 -->
+        <section class="card">
+            <h2 class="text-2xl font-bold mb-6"><i class="fas fa-film mr-2"></i> 10. 애니메이션 성지순례 TOP 5</h2>
+            <ul class="space-y-4">
+                <li class="p-4 border-l-4 border-red-500 bg-gray-50 dark:bg-gray-700">
+                    <span class="font-bold text-red-500">가마쿠라:</span> 슬램덩크 에노덴 건널목
+                </li>
+                <li class="p-4 border-l-4 border-red-500 bg-gray-50 dark:bg-gray-700">
+                    <span class="font-bold text-red-500">도쿄 요츠야:</span> 너의 이름은. 스가 신사 계단
+                </li>
+                <li class="p-4 border-l-4 border-red-500 bg-gray-50 dark:bg-gray-700">
+                    <span class="font-bold text-red-500">기후현 히다:</span> 너의 이름은. 시골 풍경 모델
+                </li>
+            </ul>
+            <div class="analysis-text">
+                애니메이션 성지순례는 단순한 관광을 넘어 콘텐츠의 감동을 현실에서 재확인하는 정서적 여정입니다. 2025-2026년에도 '슬램덩크'의 가마쿠라와 '너의 이름은.'의 도쿄/기후현 지역은 전 세계 팬들의 성지로 사랑받을 것입니다. 가마쿠라의 고쿠마에역 건널목은 전설적인 오프닝 장면을 재현하려는 사람들로 붐비므로, 인생샷을 남기고 싶다면 평일 오전 8시 이전 방문을 추천합니다. 에노덴 열차가 지나가는 순간을 포착하는 것은 그 자체로 짜릿한 경험입니다. 도쿄 시내의 스가 신사 계단 역시 마찬가지입니다. 영화 속 주인공들이 재회하는 그 장소에 서는 것만으로도 팬들에게는 잊지 못할 추억이 됩니다. 기후현의 히다후루카와는 좀 더 깊이 있는 순례를 원하는 이들에게 적합합니다. 애니메이션 속 도서관과 기차역이 실제 모습과 놀라울 정도로 일치하여 마치 영화 속으로 걸어 들어간 듯한 착각을 불러일으킵니다. 성지순례 시 주의할 점은 해당 장소들이 실제 주민들이 거주하거나 이용하는 공공장소라는 점입니다. 소란을 피우지 않고 사유지 침범을 자제하는 매너를 지키는 것이 '성숙한 덕후'의 자세입니다. 또한 관련 굿즈를 파는 샵들은 아키하바라에 밀집해 있으니, 성지 방문 후 아키하바라에서 쇼핑으로 마무리하는 동선을 짜면 완벽합니다. 이러한 성지순례는 일본 여행에 명확한 테마를 부여하며, 단순히 먹고 노는 여행 이상의 문화적 충만감을 선사할 것입니다.
+            </div>
+        </section>
+
+        <!-- 11. 최종 요약 종합 분석 -->
+        <section class="card border-2 border-red-400">
+            <h2 class="text-2xl font-bold mb-6 text-center text-red-500">🏁 2025-2026 일본 여행 성공을 위한 최종 제언</h2>
+            <div class="analysis-text">
+                본 대시보드를 통해 살펴본 2025-2026 일본 여행의 핵심 키워드는 '스마트 기술의 결합', '지역별 특화 경험', 그리고 '철저한 건강 관리'입니다. 일본은 더 이상 아날로그에 머물러 있지 않습니다. 모바일 결제와 실시간 예약 시스템을 얼마나 능숙하게 활용하느냐에 따라 여러분의 여행 시간은 두 배로 늘어날 수도, 반토막이 날 수도 있습니다. 도쿄의 번잡함 속에서도 시부야 스카이의 일몰을 즐길 수 있는 여유는 사전 예약이라는 작은 부지런함에서 나옵니다. 또한 홋카이도의 대자연이나 후쿠오카의 따뜻한 온천은 바쁜 일상을 살아가는 우리에게 단순한 휴식 이상의 가치를 제공합니다. 2026년으로 갈수록 일본 내 관광 수요는 더욱 증가할 것으로 보이며, 이는 곧 인기 명소의 예약 경쟁이 치열해짐을 의미합니다. 항공권은 최소 4개월 전, 숙소는 3개월 전, 주요 식당이나 전망대는 1개월 전에 확정하는 '선제적 대응'이 필요합니다. 마지막으로, 여행의 가장 큰 자산은 여러분의 건강입니다. 겨울철 건조한 날씨에 대비한 보습과 위생 관리를 철저히 하여, 여행이 끝난 뒤에 남는 것이 질병이 아닌 아름다운 추억뿐이기를 바랍니다. 이 대시보드에 담긴 데이터와 분석들이 여러분의 일본 여행을 더욱 풍요롭고 안전하게 만드는 든든한 나침반이 되기를 진심으로 기원합니다. 준비된 여행자에게 일본은 언제나 기대 이상의 환대를 보여줄 것입니다. 즐거운 여행 되십시오! (Bon Voyage!)
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // 테마 토글 함수
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+            const icon = document.querySelector('.theme-toggle i');
+            if(document.body.classList.contains('dark')) {
+                icon.className = 'fas fa-sun mr-2';
+            } else {
+                icon.className = 'fas fa-moon mr-2';
+            }
+        }
+
+        // USJ 차트
+        const usjCtx = document.getElementById('usjChart').getContext('2d');
+        new Chart(usjCtx, {
+            type: 'bar',
+            data: {
+                labels: ['쥬라기공원', '해리포터', '마리오카트', '미니언즈'],
+                datasets: [{
+                    label: '스릴/재미 지수 (5점 만점)',
+                    data: [5, 4.5, 4, 3.5],
+                    backgroundColor: 'rgba(239, 68, 68, 0.7)',
+                    borderColor: 'rgba(239, 68, 68, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { y: { beginAtZero: true, max: 5 } }
+            }
+        });
+
+        // 지역별 만족도 차트 (Radar)
+        const regionCtx = document.getElementById('regionChart').getContext('2d');
+        new Chart(regionCtx, {
+            type: 'radar',
+            data: {
+                labels: ['자연', '미식', '쇼핑', '접근성', '트렌드'],
+                datasets: [
+                    {
+                        label: '도쿄',
+                        data: [2, 4, 5, 5, 5],
+                        borderColor: 'red',
+                        backgroundColor: 'rgba(255, 0, 0, 0.2)'
+                    },
+                    {
+                        label: '삿포로',
+                        data: [5, 5, 3, 2, 3],
+                        borderColor: 'blue',
+                        backgroundColor: 'rgba(0, 0, 255, 0.2)'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // 일정 전환 함수
+        function showDay(day) {
+            const content = document.getElementById('dayContent');
+            if(day === 1) {
+                content.innerHTML = '<h3 class="font-bold text-lg mb-2">1-2일차: 전통과 트렌드의 조화</h3><p>아사쿠사 센소지 - 도쿄 스카이트리 - 시부야 스카이 - 하라주쿠 탐방. 시내 적응과 랜드마크 중심 일정.</p>';
+            } else if(day === 3) {
+                content.innerHTML = '<h3 class="font-bold text-lg mb-2">3일차: 테마파크/전시 몰입</h3><p>디즈니 리조트 또는 팀랩 플래닛 오다이바. 하루 종일 한 장소에서 콘텐츠에 집중하는 날.</p>';
+            } else {
+                content.innerHTML = '<h3 class="font-bold text-lg mb-2">4-5일차: 개인 취향 및 마무리</h3><p>긴자 쇼핑 - 우에노 공원 - 아키하바라 성지순례. 마지막 기념품 구매 및 공항 이동 준비.</p>';
+            }
+        }
+    </script>
+</body>
+</html>
