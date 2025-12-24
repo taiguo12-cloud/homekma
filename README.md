@@ -1,32 +1,45 @@
-# 2025-2026 일본 여행 통합 가이드 (ai_studio_japan.html)
+# 2025-2026 일본 여행 가이드 저장소
 
-이 저장소의 `ai_studio_japan.html` 파일은 2025-2026 일본 여행을 위한 통합 가이드 대시보드 HTML입니다. 외부에서 바로 열어볼 수 있도록 아래에 접근 가능한 URL을 정리해 두었습니다.
+이 저장소는 2025-2026 일본 여행을 위한 통합 가이드 및 웹사이트 모음입니다. 아래의 파일들을 웹사이트에서 직접 열어볼 수 있습니다.
 
-## 바로 열어보기 (Raw HTML)
-- Raw 파일 URL (현재 커밋 기준):
-  https://raw.githubusercontent.com/taiguo12-cloud/homekma/83d0d13c424653ded6d190d1e418d64f091de6c7/ai_studio_japan.html
+## 📁 저장소 파일 및 접근 URL
 
-  위 링크를 클릭하면 브라우저에서 HTML을 그대로 렌더링하여 페이지를 확인할 수 있습니다.
+| 파일명 | 설명 | 웹사이트 URL |
+|--------|------|------------|
+| **ai_studio_japan.html** | 2025-2026 일본 여행을 위한 통합 가이드 대시보드 | [https://taiguo12-cloud.github.io/homekma/ai_studio_japan.html](https://taiguo12-cloud.github.io/homekma/ai_studio_japan.html) |
+| **index.html** | 저장소의 메인 페이지 | [https://taiguo12-cloud.github.io/homekma/](https://taiguo12-cloud.github.io/homekma/) |
+| **japan tour.html** | 일본 투어 관련 정보 페이지 | [https://taiguo12-cloud.github.io/homekma/japan%20tour.html](https://taiguo12-cloud.github.io/homekma/japan%20tour.html) |
+| **japantour.md** | 일본 투어 마크다운 문서 | [https://github.com/taiguo12-cloud/homekma/blob/main/japantour.md](https://github.com/taiguo12-cloud/homekma/blob/main/japantour.md) |
 
-## GitHub Pages로 배포 (선택 사항)
-원하시면 GitHub Pages를 활성화하여 정식 웹사이트처럼 제공할 수 있습니다. 방법은 다음과 같습니다:
-1. GitHub 리포지토리의 `Settings` > `Pages` 로 이동합니다.
-2. `Source`를 `main` (혹은 기본 브랜치) / `root` 로 설정하고 저장합니다.
-3. 활성화 후 접근 URL 예시 (Pages가 활성화된 경우):
-   https://taiguo12-cloud.github.io/homekma/ai_studio_japan.html
+## 🌐 GitHub Pages에서 보기
 
-> 참고: GitHub Pages가 활성화되어 있지 않다면 위 URL은 동작하지 않습니다. 활성화 후 최대 몇 분 정도 걸릴 수 있습니다.
+GitHub Pages가 활성화되어 있으므로 위의 URL에서 직접 웹브라우저로 HTML 파일들을 확인할 수 있습니다.
 
-## 로컬에서 빠르게 확인하는 방법
-1. 저장소를 클론하거나 파일을 로컬에 저장합니다.
-2. 파일이 있는 디렉터리에서 간단한 HTTP 서버를 실행합니다:
+- 메인 사이트: https://taiguo12-cloud.github.io/homekma/
+- AI Studio 일본 여행 가이드: https://taiguo12-cloud.github.io/homekma/ai_studio_japan.html
+
+## 🔗 Raw 파일 접근
+
+GitHub의 Raw 파일 형식으로 최신 버전을 확인하려면:
+
+- `ai_studio_japan.html`: https://raw.githubusercontent.com/taiguo12-cloud/homekma/main/ai_studio_japan.html
+- `index.html`: https://raw.githubusercontent.com/taiguo12-cloud/homekma/main/index.html
+- `japan tour.html`: https://raw.githubusercontent.com/taiguo12-cloud/homekma/main/japan%20tour.html
+
+## 🚀 로컬에서 확인하기
+
+저장소를 클론한 후 로컬에서 확인하려면:
 
 ```bash
-# Python 3
+# 저장소 클론
+git clone https://github.com/taiguo12-cloud/homekma.git
+cd homekma
+
+# Python으로 간단한 HTTP 서버 실행
 python3 -m http.server 8000
 ```
-3. 브라우저에서 `http://localhost:8000/ai_studio_japan.html` 를 엽니다.
 
----
-
-문제가 있거나 GitHub Pages 설정을 원하시면 제가 활성화 안내를 단계별로 도와드리겠습니다.
+이후 브라우저에서 다음 주소들에 접근할 수 있습니다:
+- http://localhost:8000/
+- http://localhost:8000/ai_studio_japan.html
+- http://localhost:8000/japan%20tour.html
